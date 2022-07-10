@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ControllerApp</string>
+    <string name="activity2">activity2</string>
+    <string name="joystick_topic">cmd_vel</string>
+</resources>

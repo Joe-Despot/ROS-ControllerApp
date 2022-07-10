@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddVehicleActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/port_id"
+        app:layout_constraintEnd_toStartOf="@+id/port_id"
+        app:layout_constraintTop_toTopOf="@+id/port_id"
+        app:srcCompat="@drawable/ic_baseline_wifi_24" />
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:navigationIcon="@drawable/baseline_menu"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <Button
+        android:id="@+id/button_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@color/background3"
+        android:text="Add vehicle"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonGotolist"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGotolist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonGotolist"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/ip_adress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="ip"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/port_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="port"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/ip_adress"
+        app:layout_constraintStart_toStartOf="@+id/ip_adress"
+        app:layout_constraintTop_toBottomOf="@+id/ip_adress" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/buttonGotolist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/background3"
+        android:text="Vehicle list"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_enter"
+        app:layout_constraintTop_toBottomOf="@+id/port_id" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toStartOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/name"
+        app:srcCompat="@drawable/ic_baseline_android_24" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ip_adress"
+        app:layout_constraintEnd_toStartOf="@+id/ip_adress"
+        app:layout_constraintTop_toTopOf="@+id/ip_adress"
+        app:srcCompat="@drawable/ic_baseline_wifi_24" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="152dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Enter vehicle info:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+</android.support.constraint.ConstraintLayout>

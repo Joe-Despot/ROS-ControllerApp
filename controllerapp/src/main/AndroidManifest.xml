@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.controllerapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Android_apps_fix">
+        <activity
+            android:name=".activities.SidebarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FunctionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.HybridActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddVehicleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainMenu"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ListActivity"
+            android:exported="false"
+            android:label="activity_list" />
+        <activity
+            android:name=".activities.JoyStickActivity"
+            android:exported="false"
+            android:label="activity2" />
+        <activity
+            android:name=".common.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="org.ros.android.NodeMainExecutorService">
+            <intent-filter>
+                <action android:name="org.ros.android.NodeMainExecutorService" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
